@@ -6,6 +6,7 @@
 ___
 # Что это такое
 С помощью скрипта вы сможете скачать кучу полезного софта.
+![lool](https://raw.githubusercontent.com/Kriperovich2/lsd-script/refs/heads/main/IMG_20250212_085442_445.jpg)
 ___
 ## Загрузка
 ```sh
