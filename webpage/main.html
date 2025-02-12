@@ -21,48 +21,46 @@
         }
 
         .container {
-            text-align: left;
+            text-align: center;
             background-color: rgba(18, 18, 18, 0.8);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            max-width: 600px;
         }
 
         h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
-            text-align: center;
         }
 
-        pre {
-            background-color: #1e1e1e;
-            padding: 15px;
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .download-button {
+            background-color: #6200ea;
+            color: #ffffff;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
             border-radius: 5px;
-            overflow-x: auto;
-            font-family: "Courier New", monospace;
-            font-size: 0.9rem;
-            line-height: 1.5;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
-        code {
-            color: #4ec9b0;
-        }
-
-        a {
-            color: #6200ea;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
+        .download-button:hover {
+            background-color: #3700b3;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>LSD Script</h1>
-        <pre>
-<code>PyStyle version
-```sh
-curl -O https://raw.githubusercontent.com/kriperovich2/lsd-script/main/LSD.py
+        <p>This software allows you to download a wide range of premium software completely for free.</p>
+        <a href="https://github.com/Kriperovich2/lsd-script" target="_blank">
+            <button class="download-button">Download</button>
+        </a>
+    </div>
+</body>
+</html>
