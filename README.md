@@ -6,11 +6,22 @@
 ___
 # Что это такое
 С помощью скрипта вы сможете скачать кучу полезного софта.
-![lool](https://raw.githubusercontent.com/Kriperovich2/lsd-script/refs/heads/main/IMG_20250212_085442_445.jpg)
+
+Вид PyStyle 
+![pystyle](https://raw.githubusercontent.com/Kriperovich2/lsd-script/refs/heads/main/prewiew.jpg)
+Вид Colorama
+![cprewiew](https://github.com/user-attachments/assets/d790fe30-540e-4393-bb2c-1230f62a7166)
+
 ___
 ## Загрузка
+Версия pystyle
 ```sh
 curl -O https://raw.githubusercontent.com/kriperovich2/lsd-script/main/LSD.py
+```
+
+Версия colorama
+```sh
+curl -O https://raw.githubusercontent.com/kriperovich2/lsd-script/main/LSDc.py
 ```
 
 Для удобства создайте папку, в которую будут скачиваться все файлы
