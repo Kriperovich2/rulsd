@@ -92,17 +92,25 @@
             });
         }
 
-        function downloadFile() {
+        async function downloadFile() {
             const fileNumber = document.getElementById('fileNumber').value;
             const fileItem = document.querySelector(`.file-item:nth-child(${fileNumber})`);
             if (fileItem) {
                 const fileName = fileItem.textContent.split(' ')[1];
-                const downloadLink = document.createElement('a');
-                downloadLink.href = `https://raw.githubusercontent.com/kriperovich2/lsd-script-db/main/${fileName}`;
-                downloadLink.download = fileName;
-                document.body.appendChild(downloadLink);
-                downloadLink.click();
-                document.body.removeChild(downloadLink);
+                const fileUrl = `https://raw.githubusercontent.com/kriperovich2/lsd-script-db/main/${fileName}`;
+
+                try {
+                    const response = await fetch(fileUrl);
+                    const blob = await response.blob();
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = URL.createObjectURL(blob);
+                    downloadLink.download = fileName;
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+                    document.body.removeChild(downloadLink);
+                } catch (error) {
+                    alert('Failed to download the file.');
+                }
             } else {
                 alert('Invalid file number');
             }
