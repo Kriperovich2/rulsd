@@ -97,7 +97,12 @@
             const fileItem = document.querySelector(`.file-item:nth-child(${fileNumber})`);
             if (fileItem) {
                 const fileName = fileItem.textContent.split(' ')[1];
-                window.location.href = `https://raw.githubusercontent.com/kriperovich2/lsd-script-db/main/${fileName}`;
+                const downloadLink = document.createElement('a');
+                downloadLink.href = `https://raw.githubusercontent.com/kriperovich2/lsd-script-db/main/${fileName}`;
+                downloadLink.download = fileName;
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
             } else {
                 alert('Invalid file number');
             }
